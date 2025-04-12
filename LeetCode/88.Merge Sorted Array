@@ -1,0 +1,47 @@
+# Merge Sorted Array
+
+Define three pointers pointing to first m elements of nums1, the last n elements of nums1 and the elements of nums2. 
+
+Initialize pointer1 pointing the m-th number of nums1.
+
+Initialize pointer2 pointing the last number of nums2.
+
+Initialize pointer3 pointing the last number of nums1.
+
+```python
+pointer1 = m-1
+pointer2 = n-1
+pointer3 = m+n-1
+```
+
+ Compare the number pointed to by pointer1 with pointer2.
+
+Then, fill in the position pointed to by pointer3 with the larger number of the two numbers pointed by pointer1 and pointer2.
+
+If the numbers pointed by pointer1 and pointer2 are equal, fill in the position with the number pointed by point2.
+
+And the corresponding pointer moves one position to the left.
+
+While the numbers of nums2 are all filled in the positions of nums1, the coding stops.
+
+ There is another boundary issue. When pointer1 points to the first number of nums1, pointer2 points to the first number of nums2. 
+
+If the number of nums1 is larger than the number of nums2, it will be filled in the position pointed by pointer3. 
+
+Then the number pointed by pointer2 should be filled in the first position of nums1 without making the next round of comparison.
+
+```python
+while pointer2 > 0:
+    if nums1[pointer1] > nums2[pointer2] and pointer1 >= 0:
+        nums1[pointer3] = nums1[pointer1]
+        nums1[point1] = 0
+        pointer1 -= 1
+        pointer3 -= 1
+   	else:
+        nums1[pointer3] = nums2[pointer2]
+        pointer2 -= 1
+        pointer3 -= 1
+```
+
+
+
