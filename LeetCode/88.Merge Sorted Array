@@ -14,7 +14,7 @@ pointer2 = n-1
 pointer3 = m+n-1
 ```
 
- Compare the number pointed to by pointer1 with pointer2.
+Compare the number pointed to by pointer1 with pointer2.
 
 Then, fill in the position pointed to by pointer3 with the larger number of the two numbers pointed by pointer1 and pointer2.
 
